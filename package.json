@@ -1,12 +1,16 @@
 {
 	"name": "webpack-worker-wrapper",
 	"version": "0.0.1",
-	"description": "webpack web worker warapper to promises",
+	"description": "webpack web worker wrapper as promises (async/await)",
 	"main": "dist/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "webpack --mode=production"
-	},
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snatvb/webpack-worker-wrapper.git"
+  },
 	"keywords": [
 		"webpack",
 		"worker",

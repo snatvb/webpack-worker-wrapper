@@ -72,7 +72,7 @@ example()
 ```
 
 **Options**
-| Name | Type | Default | Description |
-|--|--|--|--|
-| timout | number | 60000 | How much need wait while send reject (in ms)
-| logging | boolean | true | Need send to console log from the wrapper
+|Name|Type|Default|Description|
+|:--:|:--:|:-----:|:----------|
+|timout|number|60000|How much need wait while send reject (in ms)
+|logging|boolean|true|Need send to console log from the wrapper
