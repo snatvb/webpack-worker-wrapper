@@ -13,33 +13,33 @@ yarn - `yarn add webpack-worker-wrapper`
 // my.worker.js
 
 function pow(num, exp) {
-	return Math.pow(num, exp)
+  return Math.pow(num, exp)
 }
 
 function sum(num1, num2) {
-	return num1 + num2
+  return num1 + num2
 }
 
 self.addEventListener('message',  (event)  =>  {
-	// message = { id: string, data: any, type: string }
-	const message = event.data
-	switch(message.type) {
-		// type for identify function
-		case 'pow':
-			self.postMessage({
-				id: message.id,
-				success: true, // for resolve or reject for your async/await
-				data: pow(...message.data), // if you send array, you can do such
-			})
-			break
-		case 'sum':
-			self.postMessage({
-				id: message.id,
-				success: true, // for resolve or reject for your async/await
-				data: sum(...message.data), // if you send array, you can do such
-			})
-			break
-	}
+  // message = { id: string, data: any, type: string }
+  const message = event.data
+  switch(message.type) {
+    // type for identify function
+    case 'pow':
+      self.postMessage({
+        id: message.id,
+        success: true, // for resolve or reject for your async/await
+        data: pow(...message.data), // if you send array, you can do such
+      })
+      break
+    case 'sum':
+      self.postMessage({
+        id: message.id,
+        success: true, // for resolve or reject for your async/await
+        data: sum(...message.data), // if you send array, you can do such
+      })
+      break
+  }
 })
 
 ```
@@ -51,20 +51,20 @@ import MyWorker from './my.worker'
 const worker = wrapper(MyWorker)
 
 const example = async () => {
-	console.log('start')
-	console.log(
-		await worker.postMessage({
-			type: 'pow', // type for case
-			data: [3, 7], // 3^7
-		})
-	)
-	console.log(
-		await worker.postMessage({
-			type: 'sum', // type for case
-			data: [3435, 6834], // 3435 + 6834
-		})
-	)
-	console.log('end')
+  console.log('start')
+  console.log(
+    await worker.postMessage({
+      type: 'pow', // type for case
+      data: [3, 7], // 3^7
+    })
+  )
+  console.log(
+      await worker.postMessage({
+      type: 'sum', // type for case
+      data: [3435, 6834], // 3435 + 6834
+    })
+  )
+  console.log('end')
 }
 
 example()
