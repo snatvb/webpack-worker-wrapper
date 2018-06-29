@@ -11,7 +11,7 @@ npm - `npm install webpack-worker-wrapper --save`
 yarn - `yarn add webpack-worker-wrapper`
 
 **Example**:
-```
+```js
 // my.worker.js
 
 function pow(num, exp) {
@@ -45,7 +45,7 @@ self.addEventListener('message',  (event)  =>  {
 })
 
 ```
-```
+```js
 // example.js
 import wrapper from 'webpack-worker-wrapper'
 import MyWorker from './my.worker'
