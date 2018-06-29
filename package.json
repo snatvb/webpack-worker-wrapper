@@ -1,0 +1,37 @@
+{
+	"name": "webpack-worker-wrapper",
+	"version": "0.0.1",
+	"description": "webpack web worker warapper to promises",
+	"main": "dist/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "webpack --mode=production"
+	},
+	"keywords": [
+		"webpack",
+		"worker",
+		"async",
+		"await",
+		"promise"
+	],
+	"author": "snatvb",
+	"license": "ISC",
+	"dependencies": {
+		"long": "^4.0.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.0.3",
+		"babel-loader": "^7.1.2",
+		"babel-plugin-add-module-exports": "^0.2.1",
+		"babel-preset-env": "^1.6.1",
+		"babel-preset-flow": "^6.23.0",
+		"babel-preset-stage-3": "^6.24.1",
+		"clean-webpack-plugin": "0.1.19",
+		"flow-bin": "^0.75.0",
+		"flow-webpack-plugin": "^1.2.0",
+		"webpack": "4.8.3",
+		"webpack-cli": "^3.0.8"
+	}
+}
