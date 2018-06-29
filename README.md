@@ -5,7 +5,9 @@ You need [**worker-loader**](https://www.npmjs.com/package/worker-loader).
 This wrapper can you help, when you need use your worker methods `async / await` style.
 ### How to use
 **Install**:
+
 npm - `npm install webpack-worker-wrapper --save`
+
 yarn - `yarn add webpack-worker-wrapper`
 
 **Example**:
